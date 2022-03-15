@@ -1,0 +1,73 @@
+//footer
+.footer {
+  background: $footer-background;
+  padding: 1.5rem 0;
+  width: 100%;
+
+  .container {
+    width: 100%;
+    .links {
+      @include grid(15rem);
+
+      .site__links,
+      .externals {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $white-color;
+
+        h6 {
+          text-align: center;
+        }
+
+        .link {
+          color: $light-gray;
+          padding: 0.7rem 0;
+          text-align: center;
+          transition: all 0.5s ease-in-out;
+
+          i {
+            padding-right: 0.5rem;
+          }
+
+          &:hover {
+            padding-left: 1.15rem;
+          }
+        }
+      }
+
+      .contact__me {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $white-color;
+
+        h6 {
+          text-align: center;
+        }
+
+        li {
+          list-style-type: none;
+          padding: 0.7rem 0;
+          width: max-content;
+
+          i {
+            float: left;
+            font-size: 1.3rem;
+            color: $light-gray;
+            padding-right: 0.5rem;
+            transform: translateY(15%);
+          }
+        }
+      }
+    }
+    .credit {
+      font-size: 1rem;
+      text-align: center;
+      color: $light-gray;
+      padding-top: 3rem;
+    }
+  }
+}

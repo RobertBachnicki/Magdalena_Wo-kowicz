@@ -1,0 +1,35 @@
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+@mixin services {
+  .title {
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    .photo {
+      img {
+        max-width: 98%;
+        height: fit-content;
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+
+    .text {
+      width: 100%;
+      text-align: justify;
+      align-self: flex-start;
+    }
+  }
+}

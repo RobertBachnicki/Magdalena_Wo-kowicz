@@ -1,0 +1,357 @@
+.start {
+  padding: 3rem;
+
+  .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
+  .row {
+    @include grid(20rem);
+
+    &__left {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      width: 100%;
+
+      &--text {
+        p:not(:last-of-type) {
+          padding-bottom: 1rem;
+        }
+      }
+
+      &--buttons {
+        display: flex;
+        justify-content: start;
+        padding-top: 3rem;
+
+        button:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//o mnie
+.info {
+  padding: 3rem;
+
+  .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    h2 {
+      .fas {
+        color: darken($color: $light-gray, $amount: 20%);
+      }
+    }
+  }
+
+  .row {
+    @include grid(20rem);
+
+    &__left {
+      &--middle {
+        text-align: justify;
+        width: 100%;
+
+        p {
+          line-height: 2.2rem;
+        }
+      }
+    }
+
+    &__right {
+      width: 100%;
+      align-self: flex-start;
+      position: relative;
+
+      &--middle {
+        text-align: center;
+        padding-bottom: 1rem;
+
+        h4 {
+          font-weight: 400;
+        }
+      }
+
+      &--text {
+        text-align: center;
+
+        p:not(:last-of-type) {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//doświadczenie
+.firms {
+  padding: 3rem;
+
+  .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+//usługi
+.services {
+  padding: 3rem;
+
+  .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
+  .counselling {
+    @include services;
+
+    .photo {
+      order: 1;
+    }
+
+    .text {
+      order: 2;
+    }
+  }
+
+  .coaching {
+    @include services;
+
+    .photo {
+      order: 2;
+    }
+
+    .text {
+      order: 1;
+    }
+  }
+
+  .psychometrics {
+    @include services;
+
+    .photo {
+      order: 1;
+    }
+
+    .text {
+      order: 2;
+    }
+  }
+
+  .portfolio {
+    @include services;
+
+    .photo {
+      order: 2;
+    }
+
+    .text {
+      order: 1;
+    }
+  }
+
+  .presentation {
+    @include services;
+
+    .photo {
+      order: 1;
+    }
+
+    .text {
+      order: 2;
+    }
+  }
+
+  .mentoring {
+    @include services;
+
+    .photo {
+      order: 2;
+    }
+
+    .text {
+      order: 1;
+    }
+  }
+}
+
+//referencje
+.references {
+  padding: 3rem;
+
+  .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
+  .grid {
+    @include grid(25rem);
+
+    .column {
+      background: $light-gray;
+      border-radius: 10px;
+
+      .text {
+        padding: 0 1.5rem;
+
+        .person {
+          display: flex;
+          align-items: center;
+          padding: 1rem 0;
+          color: lighten($color: $main-color, $amount: 2%);
+
+          .fa-user-circle {
+            color: lighten($color: $main-color, $amount: 2%);
+            font-size: 2rem;
+          }
+        }
+
+        p {
+          text-align: justify;
+          padding-bottom: 1rem;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
+
+//cennik
+.prices {
+  padding: 3rem;
+
+  .intro {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
+  .grid {
+    @include grid(18rem);
+
+    &__left,
+    &__middle,
+    &__right {
+      border-radius: 10px;
+      padding: 1rem;
+      background: lighten($nav-background, 50%);
+
+      p {
+        font-size: 0.95rem !important;
+        text-align: justify;
+        line-height: 2;
+      }
+    }
+
+    &__middle {
+      p:nth-of-type(1) {
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+//contact
+.contact {
+  padding: 3rem;
+
+  .intro {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
+  .grid {
+    @include grid(25rem);
+
+    &__left {
+      width: 100%;
+
+      iframe {
+        width: 100%;
+      }
+    }
+
+    &__right {
+      width: 100%;
+
+      div {
+        display: flex;
+
+        input,
+        textarea {
+          border: $border;
+          border-radius: 5px;
+          margin-bottom: 2rem;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"] {
+          width: 80%;
+          font-size: 1rem;
+          padding: 1rem 0.5rem;
+          margin-right: 1rem;
+        }
+
+        textarea {
+          width: 97%;
+          font-size: 1rem;
+          padding: 1rem 0.5rem;
+          margin-right: 1rem;
+
+          &::placeholder {
+            font-family: "Poppins", sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
